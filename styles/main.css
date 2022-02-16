@@ -10,3 +10,9 @@
 body {
 	@apply font-sans antialiased;
 }
+.text-span {
+	@apply block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15]  tracking-tight mr-8 mb-1;
+}
+.form-attribute {
+	@apply w-full p-6 font-sans text-sm font-normal uppercase transition-colors duration-500 ease-in-out bg-transparent border text-blush border-blush md:text-base xl:text-lg leading-[1.15]  tracking-tight mb-6 focus:outline-none  focus:border-pink placeholder-blush focus:text-pink;
+}

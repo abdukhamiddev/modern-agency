@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<DefaultSeo {...SEO} />
+			<div className="fixed inset-0 w-full h-full pointer-events-none z-[100]" />
 			<AnimatePresence exitBeforeEnter>
 				<Component {...pageProps} key={router.path} />
 			</AnimatePresence>
