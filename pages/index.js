@@ -39,46 +39,59 @@ export default function Home() {
 										className={` p-6 h-screen relative ${colorThemes[currentColorTheme]}
 						`}
 									>
+										<div className="absolute top-0 left-0 right-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
+											<span className="flex flex-row h-full font-sans text-lg font-normal uppercase md:flex-col leading-[1.15] md:leading-[1.15] tracking-tight">
+												<span className="flex-1 block text-center rotate-90">
+													Built
+												</span>
+												<span className="flex-1 block text-center rotate-90 ">
+													on
+												</span>
+												<span className="flex-1 block text-center rotate-90">
+													trust
+												</span>
+												<span className="flex-1 block text-center rotate-90 ">
+													and
+												</span>
+												<span className="flex-1 block text-center rotate-90 ">
+													true
+												</span>
+												<span className="flex-1 block text-center rotate-90 ">
+													creative
+												</span>
+												<span className="flex-1 block text-center rotate-90 ">
+													spirit
+												</span>
+											</span>
+										</div>
 										<div className="absolute top-0 right-0 block md:hidden z-[100] w-[100vw] mt-[30vw]">
 											<div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
 												<div className="flex flex-row animate-marqueeH whitespace-nowrap space-x-[20px] md:space-x-[50px]">
-													<ImageC src="https://placedog.net/500/640" />
-													<ImageC src="https://placedog.net/500/640" />
-													<ImageC src="https://placedog.net/500/640" />
-													<ImageC src="https://placedog.net/500/640" />
-													<ImageC src="https://placedog.net/500/640" />
+													<ImageC src="/images/01.webp" />
+													<ImageC src="/images/02.webp" />
+													<ImageC src="/images/03.webp" />
+													<ImageC src="/images/04.webp" />
+													<ImageC src="/images/05.webp" />
 												</div>
 											</div>
 										</div>
-										<div className="absolute hidden md:block z-[100] top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[28%] 3xl:w-[26%] h-screen overflow-hidden">
+										<div className="absolute hidden md:block z-[100] top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[28%] 3xl:w-[26%] h-screen overflow-hidden mr-[60px]">
 											<div className="relative flex flex-col space-y-[20px] overflow-y-hidden md:space-y-[50px]">
 												<div className="flex flex-col w-full transform animate-marquee whitespace-nowrap space-y-[20px] md:space-y-[50px] ">
-													<ImageC src="../public/images/01.webp" isDesktop />
-													<ImageC
-														src="https://placedog.net/500/640"
-														isDesktop
-													/>
-													<ImageC
-														src="https://placedog.net/500/640"
-														isDesktop
-													/>
-													<ImageC
-														src="https://placedog.net/500/640"
-														isDesktop
-													/>
-													<ImageC
-														src="https://placedog.net/500/640"
-														isDesktop
-													/>
+													<ImageC src="/images/01.webp" isDesktop />
+													<ImageC src="/images/02.webp" isDesktop />
+													<ImageC src="/images/03.webp" isDesktop />
+													<ImageC src="/images/04.webp" isDesktop />
+													<ImageC src="/images/05.webp" isDesktop />
 												</div>
 											</div>
 										</div>
 										<article className="flex flex-wrap h-full">
-											<div className="w-full mb-auto ">
+											<div className="w-[92vw] mb-auto ">
 												<Palmar />
 											</div>
-											<div className="mt-auto 2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[70vw]">
-												<div className="max-w-[580px] mb-6 xl:mb-10 2xl:mb-0">
+											<div className="mt-auto 2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw]">
+												<div className="max-w-[500px] mb-6 xl:mb-10 2xl:mb-0">
 													<h1 className="font-serif text-[35px] md:text-[48px] xl:text-[54px] 2xl:text-[64px] leading-none tracking-tighter">
 														Palmar is a divergent parts modelling agency
 														representing <span className="italic">black</span>,

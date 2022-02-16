@@ -14,6 +14,9 @@ module.exports = {
 };
 
 module.exports = {
+	images: {
+		domains: ["placedog.net"],
+	},
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
