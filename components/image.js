@@ -1,22 +1,35 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+import { m } from "framer-motion";
+import Image from "next/image";
 
-const ImageC = ({ src, isDesktop }) => {
+function ImageD({
+	revealImage,
+	colorThemes,
+	themeContext,
+	imageUrl,
+	isDesktop,
+}) {
 	return (
 		<div
-			className={`md:h-full overflow-hidden  ${
-				isDesktop ? "w-full" : " w-[65vw]"
-			}`}
+			className={`relative ${
+				isDesktop ? "w-full" : "w-[65vw]"
+			} h-full overflow-hidden`}
 		>
-			<img
-				src={src}
-				alt="Dog"
-				className={` md:h-full object-cover object-center scale-105   ${
-					isDesktop ? "w-full" : " w-[65vw]"
-				}`}
+			{isDesktop && (
+				<m.span
+					variants={revealImage}
+					className={`block z-[1000] w-full h-full absolute  inset-0 ${colorThemes[themeContext]}`}
+				></m.span>
+			)}
+			<Image
+				alt="Hand model"
+				src={imageUrl}
+				className="object-cover object-center w-full scale-105"
+				layout="responsive"
+				priority={true}
+				width={1334}
+				height={1613}
 			/>
 		</div>
 	);
-};
-
-export default ImageC;
+}
+export default ImageD;

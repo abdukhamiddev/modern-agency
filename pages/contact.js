@@ -7,9 +7,17 @@ import dynamic from "next/dynamic";
 const Hello = dynamic(() => import("/public/assets/hello.svg"));
 import Link from "next/link";
 import { fade } from "@/helpers/transitions";
+import { IntroContext } from "@/context/intro";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
 	const containerRef = useRef(null);
+	const [introContext, setIntroContext] = useState(IntroContext);
+	useEffect(() => {
+		setTimeout(() => {
+			setIntroContext(true);
+		}, 4000);
+	}, []);
 
 	return (
 		<Layout>

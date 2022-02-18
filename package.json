@@ -10,7 +10,7 @@
   "dependencies": {
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-    "framer-motion": "^6.2.6",
+    "framer-motion": "4.1.17",
     "locomotive-scroll": "^4.1.4",
     "next": "12.0.10",
     "next-seo": "^5.1.0",
