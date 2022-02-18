@@ -9,8 +9,27 @@ import { fade } from "@/helpers/transitions";
 import ImageC from "@/components/image";
 import Link from "next/link";
 
+const introEnd = {
+	visible: { opacity: 0 },
+	hidden: { opacity: "100%" },
+};
+const imageLoad = {
+	visible: { opacity: 0 },
+	hidden: { opacity: "100%" },
+};
+
+const imageReveal = {
+	visible: { opacity: "-100%" },
+	hidden: { opacity: 0 },
+};
+const imageRevealOut = {
+	visible: { y: 0, scale: 1.1 },
+	hidden: { y: "100%" },
+};
+
 export default function Home() {
 	const containerRef = useRef(null);
+
 	let colorThemes = [
 		"bg-pink text-black",
 		"bg-green text-black",
@@ -36,7 +55,7 @@ export default function Home() {
 								<m.div initial="initial" animate="enter" exit="exit">
 									<m.main
 										varians={fade}
-										className={` p-6 h-screen relative ${colorThemes[currentColorTheme]}
+										className={` p-4 md:p-6 h-screen relative ${colorThemes[currentColorTheme]}
 						`}
 									>
 										<div className="absolute top-0 left-0 right-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
@@ -64,12 +83,12 @@ export default function Home() {
 												</span>
 											</span>
 										</div>
-										<div className="absolute top-0 right-0 block md:hidden z-[100] w-[100vw] mt-[30vw]">
+										<div className="absolute top-0 right-0 block md:hidden z-[100] w-[100vw] mt-[30vw] bottom-0 mb-[10vw]  ">
 											<div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
 												<div className="flex flex-row animate-marqueeH whitespace-nowrap space-x-[20px] md:space-x-[50px]">
 													<ImageC src="/images/01.webp" />
 													<ImageC src="/images/02.webp" />
-													<ImageC src="/images/03.webp" />
+													{/* <ImageC src="/images/03.webp" /> */}
 													<ImageC src="/images/04.webp" />
 													<ImageC src="/images/05.webp" />
 												</div>
@@ -86,13 +105,13 @@ export default function Home() {
 												</div>
 											</div>
 										</div>
-										<article className="flex flex-wrap h-full">
-											<div className="w-[92vw] mb-auto ">
+										<article className="md:flex md:flex-wrap h-full">
+											<div className="w-[92vw] mb-[12.5vw]  md:mb-auto">
 												<Palmar />
 											</div>
-											<div className="mt-auto 2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw]">
-												<div className="max-w-[500px] mb-6 xl:mb-10 2xl:mb-0">
-													<h1 className="font-serif text-[35px] md:text-[48px] xl:text-[54px] 2xl:text-[64px] leading-none tracking-tighter">
+											<div className="mt-auto 2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw] ">
+												<div className="max-w-[260px]  md:max-w-[500px]  mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0">
+													<h1 className="font-serif text-[28px] md:text-[48px] xl:text-[50px] 2xl:text-[64px] leading-none tracking-tighter">
 														Palmar is a divergent parts modelling agency
 														representing <span className="italic">black</span>,
 														<span className="italic">asian </span>
@@ -102,7 +121,7 @@ export default function Home() {
 												</div>
 												<div className="flex space-x-6 2xl:mt-auto">
 													<Link href="/contact">
-														<a className="block text-sm underline uppercase md:text-base">
+														<a className="block text-sm underline uppercase md:text-base group">
 															Contact
 														</a>
 													</Link>

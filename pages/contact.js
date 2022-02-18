@@ -51,7 +51,7 @@ const Contact = () => {
 																type="text"
 																id="name"
 																placeholder="Your Name"
-																className="form-attribute"
+																className="form-attribute "
 															/>
 															<label htmlFor="email" className="sr-only">
 																Email Address
@@ -78,24 +78,28 @@ const Contact = () => {
 										className="relative w-full p-6 mt-auto"
 										variants={fade}
 									>
-										<div className="flex">
-											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8">
+										<div className="flex flex-wrap">
+											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8 w-full md:w-auto mb-[5px] md:mb-0">
 												@Palmar Agency 2021
 											</span>
-											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8 md:mr-24">
+											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8 md:mr-24 w-1/2 md:w-auto mb-[5px] md:mb-0">
 												Site by
 												<a
 													href="https://github.com/abdukhamiddev"
 													rel="noopener noreferrer"
 													target="_blank"
-													className="ml-2 italic underline"
+													className="group relative  ml-2"
 												>
-													Abdukhamid
+													Abdukhamid{" "}
+													<span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span>
 												</a>
 											</span>
-											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8">
+											<span className="block font-sans text-sm font-normal uppercase md:text-base xl:text-lg leading-[1.15] tracking-tight mr-8 w-1/2 md:w-auto">
 												<Link href="/">
-													<a className="underline">Back to home</a>
+													<a className="group relative">
+														Back to home{" "}
+														<span className="bottom-0 left-0 right-0 border-b border-current absolute w-full group-hover:w-0  group-focus:w-0 duration-500  transition-all ease-in-out"></span>
+													</a>
 												</Link>
 											</span>
 										</div>
