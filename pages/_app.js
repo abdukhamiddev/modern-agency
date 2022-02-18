@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
 								>
 									<div className="relative w-full max-w-xs overflow-hidden md:max-w-md 2xl:max-w-xl">
 										<m.div
-											className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]}  bg-red-600`}
+											className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]} `}
 											initial="hidden"
 											animate="visible"
 											variants={imageReveal}
@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }) {
 										/>
 
 										<m.div
-											className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]} bg-red-600`}
+											className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]} `}
 											initial="hidden"
 											animate="visible"
 											variants={imageRevealOut}
